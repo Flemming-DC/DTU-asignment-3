@@ -1,0 +1,16 @@
+[0m[[0m[31merror[0m] [0m[0mfirrtl.transforms.CheckCombLoops$CombLoopException: : [module SystemTop] Combinational loop detected:[0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead[0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataRead	 @[SystemTop.scala 27:27][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataWrite	 @[Accelerator.scala 23:16][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataWrite	 @[SystemTop.scala 29:27][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_11	 @[DataMemory.scala 37:26][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_16	 @[DataMemory.scala 22:24][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead	 @[DataMemory.scala 26:17 DataMemory.scala 34:17 DataMemory.scala 40:19][0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mrunMain[0m) firrtl.transforms.CheckCombLoops$CombLoopException: : [module SystemTop] Combinational loop detected:[0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead[0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataRead	 @[SystemTop.scala 27:27][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataWrite	 @[Accelerator.scala 23:16][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataWrite	 @[SystemTop.scala 29:27][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_11	 @[DataMemory.scala 37:26][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_16	 @[DataMemory.scala 22:24][0m
+[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead	 @[DataMemory.scala 26:17 DataMemory.scala 34:17 DataMemory.scala 40:19][0m

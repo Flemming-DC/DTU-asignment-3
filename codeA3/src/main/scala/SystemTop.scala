@@ -3,8 +3,8 @@ import chisel3.util._
 
 class SystemTop extends Module {
   val io = IO(new Bundle {
-    val done = Output(Bool ())
     val start = Input(Bool ())
+    val done = Output(Bool ())
 
     val testerDataMemEnable = Input(Bool ())
     val testerDataMemAddress = Input(UInt (16.W))

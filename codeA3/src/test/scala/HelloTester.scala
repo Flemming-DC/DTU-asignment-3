@@ -25,7 +25,7 @@ class HelloTester(dut: Hello) extends PeekPokeTester(dut) {
   poke(dut.io.testerDataMemEnable, 0)
   System.out.println("Done!")
 
-  //Run the test for 1000 cycles or till the done flag goes high
+  //Run the test for 1000 cycles or til the done flag goes high
   System.out.println("Running the Hello Tester")
   poke(dut.io.start, 1)
   var running = true
