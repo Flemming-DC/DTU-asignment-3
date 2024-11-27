@@ -1,16 +1,54 @@
-[0m[[0m[31merror[0m] [0m[0mfirrtl.transforms.CheckCombLoops$CombLoopException: : [module SystemTop] Combinational loop detected:[0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead[0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataRead	 @[SystemTop.scala 27:27][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataWrite	 @[Accelerator.scala 23:16][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataWrite	 @[SystemTop.scala 29:27][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_11	 @[DataMemory.scala 37:26][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_16	 @[DataMemory.scala 22:24][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead	 @[DataMemory.scala 26:17 DataMemory.scala 34:17 DataMemory.scala 40:19][0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mrunMain[0m) firrtl.transforms.CheckCombLoops$CombLoopException: : [module SystemTop] Combinational loop detected:[0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead[0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataRead	 @[SystemTop.scala 27:27][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.accelerator.io_dataWrite	 @[Accelerator.scala 23:16][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataWrite	 @[SystemTop.scala 29:27][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_11	 @[DataMemory.scala 37:26][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory._GEN_16	 @[DataMemory.scala 22:24][0m
-[0m[[0m[31merror[0m] [0m[0mSystemTop.dataMemory.io_dataRead	 @[DataMemory.scala 26:17 DataMemory.scala 34:17 DataMemory.scala 40:19][0m
+[0m[[0m[31merror[0m] [0m[0mchisel3.package$ExpectedHardwareException: reg initializer 'UInt<32>' must be hardware, not a bare Chisel type. Perhaps you forgot to wrap it in Wire(_) or IO(_)?[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.requireIsHardware$.apply(Binding.scala:20)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.RegInit$.apply(Reg.scala:178)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.RegInit$.apply(Reg.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m	at Accelerator.<init>(Accelerator.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SystemTop.$anonfun$accelerator$1(SystemTop.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:52)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SystemTop.<init>(SystemTop.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SystemTopTester$.$anonfun$main$1(SystemTopTester.scala:86)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:52)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.ChiselGeneratorAnnotation.$anonfun$elaborate$1(ChiselAnnotations.scala:50)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.$anonfun$build$1(Builder.scala:414)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.build(Builder.scala:412)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.ChiselGeneratorAnnotation.elaborate(ChiselAnnotations.scala:50)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.phases.Elaborate.$anonfun$transform$1(Elaborate.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike.$anonfun$flatMap$1(TraversableLike.scala:244)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:392)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike.flatMap(TraversableLike.scala:244)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.TraversableLike.flatMap$(TraversableLike.scala:241)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.flatMap(List.scala:355)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.phases.Elaborate.transform(Elaborate.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.iotesters.setupTreadleBackend$.apply(TreadleBackend.scala:143)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.iotesters.Driver$.$anonfun$execute$2(Driver.scala:53)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.$anonfun$makeScope$2(Logger.scala:168)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:166)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:127)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.iotesters.Driver$.$anonfun$execute$1(Driver.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.iotesters.Driver$.execute(Driver.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.iotesters.Driver$.execute(Driver.scala:102)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SystemTopTester$.main(SystemTopTester.scala:87)[0m
+[0m[[0m[31merror[0m] [0m[0m	at SystemTopTester.main(SystemTopTester.scala)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.reflect.Method.invoke(Method.java:498)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:144)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:187)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunMainTask$7(Defaults.scala:2006)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1977)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:367)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:750)[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mrunMain[0m) chisel3.package$ExpectedHardwareException: reg initializer 'UInt<32>' must be hardware, not a bare Chisel type. Perhaps you forgot to wrap it in Wire(_) or IO(_)?[0m
