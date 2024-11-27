@@ -116,94 +116,105 @@ module Accelerator(
   reg [31:0] _RAND_6;
   reg [31:0] _RAND_7;
   reg [31:0] _RAND_8;
+  reg [31:0] _RAND_9;
 `endif // RANDOMIZE_REG_INIT
-  reg [15:0] reg1; // @[Accelerator.scala 18:21]
-  reg [15:0] reg2; // @[Accelerator.scala 19:21]
-  reg [3:0] _T; // @[Accelerator.scala 37:33]
-  reg [31:0] _T_1; // @[Accelerator.scala 38:29]
-  reg [31:0] _T_2; // @[Accelerator.scala 39:29]
-  reg [31:0] _T_3; // @[Accelerator.scala 40:35]
-  reg [31:0] _T_4; // @[Accelerator.scala 41:39]
-  reg [31:0] _T_5; // @[Accelerator.scala 42:40]
-  reg [31:0] _T_6; // @[Accelerator.scala 43:38]
-  wire  _T_8 = 4'h0 == _T; // @[Conditional.scala 37:30]
-  wire  _T_9 = 4'h1 == _T; // @[Conditional.scala 37:30]
-  wire  _T_10 = _T_1 < 32'h14; // @[Accelerator.scala 56:28]
-  wire  _T_12 = 4'h2 == _T; // @[Conditional.scala 37:30]
-  wire  _T_13 = 4'h3 == _T; // @[Conditional.scala 37:30]
-  wire [31:0] _T_15 = _T_2 + 32'h1; // @[Accelerator.scala 66:40]
-  wire [36:0] _T_16 = 32'h14 * _T_15; // @[Accelerator.scala 135:28]
-  wire [36:0] _GEN_99 = {{5'd0}, _T_1}; // @[Accelerator.scala 135:21]
-  wire [36:0] _T_18 = _GEN_99 + _T_16; // @[Accelerator.scala 135:21]
-  wire  _T_19 = _T_2 < 32'h14; // @[Accelerator.scala 68:28]
-  wire  _T_21 = 4'h4 == _T; // @[Conditional.scala 37:30]
-  wire [31:0] _T_23 = _T_2 - 32'h1; // @[Accelerator.scala 73:40]
-  wire [36:0] _T_24 = 32'h14 * _T_23; // @[Accelerator.scala 135:28]
-  wire [36:0] _T_26 = _GEN_99 + _T_24; // @[Accelerator.scala 135:21]
-  wire  _T_27 = _T_1 == 32'h0; // @[Accelerator.scala 75:29]
-  wire  _T_28 = _T_1 == 32'h13; // @[Accelerator.scala 75:45]
-  wire  _T_29 = _T_27 | _T_28; // @[Accelerator.scala 75:37]
-  wire  _T_30 = _T_2 == 32'h0; // @[Accelerator.scala 75:62]
-  wire  _T_31 = _T_29 | _T_30; // @[Accelerator.scala 75:54]
-  wire  _T_32 = _T_2 == 32'h13; // @[Accelerator.scala 75:78]
-  wire  _T_33 = _T_31 | _T_32; // @[Accelerator.scala 75:70]
-  wire  _T_34 = _T_3 == 32'h0; // @[Accelerator.scala 76:33]
-  wire  _T_35 = ~_T_33; // @[Accelerator.scala 77:23]
-  wire  _T_38 = 4'h5 == _T; // @[Conditional.scala 37:30]
-  wire  _T_39 = _T_4 == 32'h0; // @[Accelerator.scala 86:25]
-  wire  _T_40 = _T_5 == 32'h0; // @[Accelerator.scala 87:25]
-  wire  _T_41 = _T_39 & _T_40; // @[Accelerator.scala 86:33]
-  wire  _T_42 = _T_6 == 32'h0; // @[Accelerator.scala 88:25]
-  wire  _T_43 = _T_41 & _T_42; // @[Accelerator.scala 87:33]
-  wire  _T_47 = 4'h6 == _T; // @[Conditional.scala 37:30]
-  wire [36:0] _T_48 = 32'h14 * _T_2; // @[Accelerator.scala 96:34]
-  wire [36:0] _T_50 = _GEN_99 + _T_48; // @[Accelerator.scala 96:27]
-  wire [36:0] _T_52 = _T_50 + 37'h190; // @[Accelerator.scala 96:41]
-  wire  _T_53 = 4'h7 == _T; // @[Conditional.scala 37:30]
-  wire  _T_59 = 4'h8 == _T; // @[Conditional.scala 37:30]
-  wire [31:0] _T_63 = _T_1 + 32'h1; // @[Accelerator.scala 115:36]
-  wire [36:0] _GEN_103 = {{5'd0}, _T_63}; // @[Accelerator.scala 135:21]
-  wire [36:0] _T_66 = _GEN_103 + _T_48; // @[Accelerator.scala 135:21]
-  wire  _T_67 = 4'h9 == _T; // @[Conditional.scala 37:30]
-  wire  _T_70 = 4'ha == _T; // @[Conditional.scala 37:30]
-  wire [15:0] _GEN_1 = _T_70 ? 16'h1 : reg2; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_5 = _T_67 ? reg2 : _GEN_1; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_9 = _T_59 ? _T_66 : 37'h0; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_13 = _T_59 ? reg2 : _GEN_5; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_15 = _T_53 ? _T_52 : _GEN_9; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_16 = _T_53 ? 16'h0 : reg1; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_23 = _T_53 ? reg2 : _GEN_13; // @[Conditional.scala 39:67]
-  wire  _GEN_24 = _T_47 | _T_53; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_25 = _T_47 ? _T_52 : _GEN_15; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_26 = _T_47 ? 16'hff : _GEN_16; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_33 = _T_47 ? reg2 : _GEN_23; // @[Conditional.scala 39:67]
-  wire  _GEN_35 = _T_38 ? 1'h0 : _GEN_24; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_36 = _T_38 ? 37'h0 : _GEN_25; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_37 = _T_38 ? reg1 : _GEN_26; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_43 = _T_38 ? reg2 : _GEN_33; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_44 = _T_21 ? _T_26 : _GEN_36; // @[Conditional.scala 39:67]
-  wire  _GEN_47 = _T_21 ? 1'h0 : _GEN_35; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_48 = _T_21 ? reg1 : _GEN_37; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_54 = _T_21 ? reg2 : _GEN_43; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_55 = _T_13 ? _T_18 : _GEN_44; // @[Conditional.scala 39:67]
-  wire  _GEN_58 = _T_13 ? 1'h0 : _GEN_47; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_59 = _T_13 ? reg1 : _GEN_48; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_65 = _T_13 ? reg2 : _GEN_54; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_68 = _T_12 ? 37'h0 : _GEN_55; // @[Conditional.scala 39:67]
-  wire  _GEN_70 = _T_12 ? 1'h0 : _GEN_58; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_71 = _T_12 ? reg1 : _GEN_59; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_76 = _T_12 ? reg2 : _GEN_65; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_80 = _T_9 ? 37'h0 : _GEN_68; // @[Conditional.scala 39:67]
-  wire  _GEN_82 = _T_9 ? 1'h0 : _GEN_70; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_83 = _T_9 ? reg1 : _GEN_71; // @[Conditional.scala 39:67]
-  wire [15:0] _GEN_87 = _T_9 ? reg2 : _GEN_76; // @[Conditional.scala 39:67]
-  wire [36:0] _GEN_91 = _T_8 ? 37'h0 : _GEN_80; // @[Conditional.scala 40:58]
-  wire [15:0] _GEN_94 = _T_8 ? reg1 : _GEN_83; // @[Conditional.scala 40:58]
-  wire [15:0] _GEN_98 = _T_8 ? reg2 : _GEN_87; // @[Conditional.scala 40:58]
-  assign io_done = _GEN_98[0]; // @[Accelerator.scala 25:11 Accelerator.scala 28:11 Accelerator.scala 128:15]
-  assign io_address = _GEN_91[15:0]; // @[Accelerator.scala 23:14 Accelerator.scala 135:16 Accelerator.scala 135:16 Accelerator.scala 96:18 Accelerator.scala 105:18 Accelerator.scala 135:16]
-  assign io_writeEnable = _T_8 ? 1'h0 : _GEN_82; // @[Accelerator.scala 22:18 Accelerator.scala 95:22 Accelerator.scala 104:22]
-  assign io_dataWrite = {{16'd0}, _GEN_94}; // @[Accelerator.scala 24:16 Accelerator.scala 97:20 Accelerator.scala 106:20]
+  reg [3:0] stateReg; // @[Accelerator.scala 55:25]
+  reg [31:0] xReg; // @[Accelerator.scala 56:21]
+  reg [31:0] yReg; // @[Accelerator.scala 57:21]
+  reg [31:0] inImageReg; // @[Accelerator.scala 58:27]
+  reg [31:0] inImageLeftReg; // @[Accelerator.scala 59:31]
+  reg [31:0] inImageRightReg; // @[Accelerator.scala 60:32]
+  reg [31:0] inImageTopReg; // @[Accelerator.scala 61:30]
+  reg [31:0] inImageDownReg; // @[Accelerator.scala 62:31]
+  reg [31:0] debugReg; // @[Accelerator.scala 64:25]
+  reg [31:0] debugRegVal; // @[Accelerator.scala 65:28]
+  wire  _T = 4'h0 == stateReg; // @[Conditional.scala 37:30]
+  wire  _T_1 = 4'h1 == stateReg; // @[Conditional.scala 37:30]
+  wire  _T_2 = xReg < 32'h14; // @[Accelerator.scala 81:28]
+  wire  _T_4 = 4'h2 == stateReg; // @[Conditional.scala 37:30]
+  wire [5:0] _T_5 = 5'h14 * 5'h0; // @[Accelerator.scala 185:28]
+  wire [5:0] _T_10 = 6'h1 + _T_5; // @[Accelerator.scala 185:21]
+  wire  _T_11 = 4'h3 == stateReg; // @[Conditional.scala 37:30]
+  wire [31:0] _T_13 = xReg + 32'h1; // @[Accelerator.scala 100:36]
+  wire [36:0] _T_14 = 32'h14 * yReg; // @[Accelerator.scala 185:28]
+  wire [36:0] _GEN_115 = {{5'd0}, _T_13}; // @[Accelerator.scala 185:21]
+  wire [36:0] _T_16 = _GEN_115 + _T_14; // @[Accelerator.scala 185:21]
+  wire  _T_17 = yReg < 32'h14; // @[Accelerator.scala 103:28]
+  wire  _T_19 = 4'h4 == stateReg; // @[Conditional.scala 37:30]
+  wire [31:0] _T_21 = xReg - 32'h1; // @[Accelerator.scala 111:35]
+  wire [36:0] _GEN_116 = {{5'd0}, _T_21}; // @[Accelerator.scala 185:21]
+  wire [36:0] _T_24 = _GEN_116 + _T_14; // @[Accelerator.scala 185:21]
+  wire  _T_25 = xReg == 32'h0; // @[Accelerator.scala 114:29]
+  wire  _T_26 = xReg == 32'h13; // @[Accelerator.scala 114:45]
+  wire  _T_27 = _T_25 | _T_26; // @[Accelerator.scala 114:37]
+  wire  _T_28 = yReg == 32'h0; // @[Accelerator.scala 114:62]
+  wire  _T_29 = _T_27 | _T_28; // @[Accelerator.scala 114:54]
+  wire  _T_30 = yReg == 32'h13; // @[Accelerator.scala 114:78]
+  wire  _T_31 = _T_29 | _T_30; // @[Accelerator.scala 114:70]
+  wire  _T_32 = inImageReg == 32'h0; // @[Accelerator.scala 115:33]
+  wire  _T_33 = ~_T_31; // @[Accelerator.scala 116:23]
+  wire [2:0] _T_34 = _T_32 ? 3'h6 : 3'h5; // @[Accelerator.scala 117:12]
+  wire  _T_36 = 4'h5 == stateReg; // @[Conditional.scala 37:30]
+  wire  _T_37 = inImageLeftReg == 32'h0; // @[Accelerator.scala 128:29]
+  wire [5:0] _GEN_3 = _T_37 ? 6'h33 : 6'h5; // @[Accelerator.scala 128:38]
+  wire  _T_38 = inImageRightReg == 32'h0; // @[Accelerator.scala 129:30]
+  wire [5:0] _GEN_4 = _T_38 ? 6'h34 : _GEN_3; // @[Accelerator.scala 129:39]
+  wire  _T_39 = inImageTopReg == 32'h0; // @[Accelerator.scala 130:28]
+  wire [5:0] _GEN_5 = _T_39 ? 6'h35 : _GEN_4; // @[Accelerator.scala 130:37]
+  wire  _T_40 = inImageDownReg == 32'h0; // @[Accelerator.scala 131:29]
+  wire [5:0] _GEN_6 = _T_40 ? 6'h36 : _GEN_5; // @[Accelerator.scala 131:38]
+  wire  _T_43 = _T_37 | _T_38; // @[Accelerator.scala 135:33]
+  wire  _T_45 = _T_43 | _T_39; // @[Accelerator.scala 136:33]
+  wire  _T_47 = _T_45 | _T_40; // @[Accelerator.scala 137:33]
+  wire [2:0] _T_48 = _T_47 ? 3'h6 : 3'h7; // @[Accelerator.scala 139:22]
+  wire [5:0] _GEN_7 = _T_47 ? 6'h2 : _GEN_6; // @[Accelerator.scala 140:33]
+  wire  _T_49 = 4'h6 == stateReg; // @[Conditional.scala 37:30]
+  wire [36:0] _GEN_117 = {{5'd0}, xReg}; // @[Accelerator.scala 146:27]
+  wire [36:0] _T_52 = _GEN_117 + _T_14; // @[Accelerator.scala 146:27]
+  wire [36:0] _T_54 = _T_52 + 37'h190; // @[Accelerator.scala 146:41]
+  wire  _T_55 = debugReg == 32'h2; // @[Accelerator.scala 151:22]
+  wire  _T_56 = 4'h7 == stateReg; // @[Conditional.scala 37:30]
+  wire  _T_62 = 4'h8 == stateReg; // @[Conditional.scala 37:30]
+  wire [31:0] _T_64 = yReg + 32'h1; // @[Accelerator.scala 164:40]
+  wire [36:0] _T_65 = 32'h14 * _T_64; // @[Accelerator.scala 185:28]
+  wire [36:0] _T_67 = _GEN_117 + _T_65; // @[Accelerator.scala 185:21]
+  wire  _T_70 = 4'h9 == stateReg; // @[Conditional.scala 37:30]
+  wire  _T_73 = 4'ha == stateReg; // @[Conditional.scala 37:30]
+  wire  _GEN_13 = _T_70 ? 1'h0 : _T_73; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_14 = _T_62 ? _T_67 : {{5'd0}, debugReg}; // @[Conditional.scala 39:67]
+  wire  _GEN_19 = _T_62 ? 1'h0 : _GEN_13; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_21 = _T_56 ? _T_54 : _GEN_14; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_22 = _T_56 ? 32'hff : debugRegVal; // @[Conditional.scala 39:67]
+  wire  _GEN_27 = _T_56 ? 1'h0 : _GEN_19; // @[Conditional.scala 39:67]
+  wire  _GEN_28 = _T_49 | _T_56; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_29 = _T_49 ? _T_54 : _GEN_21; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_30 = _T_49 ? 32'h0 : _GEN_22; // @[Conditional.scala 39:67]
+  wire  _GEN_36 = _T_49 ? 1'h0 : _GEN_27; // @[Conditional.scala 39:67]
+  wire  _GEN_40 = _T_36 ? 1'h0 : _GEN_28; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_41 = _T_36 ? {{5'd0}, debugReg} : _GEN_29; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_42 = _T_36 ? debugRegVal : _GEN_30; // @[Conditional.scala 39:67]
+  wire  _GEN_46 = _T_36 ? 1'h0 : _GEN_36; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_47 = _T_19 ? _T_24 : _GEN_41; // @[Conditional.scala 39:67]
+  wire  _GEN_53 = _T_19 ? 1'h0 : _GEN_40; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_54 = _T_19 ? debugRegVal : _GEN_42; // @[Conditional.scala 39:67]
+  wire  _GEN_58 = _T_19 ? 1'h0 : _GEN_46; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_59 = _T_11 ? _T_16 : _GEN_47; // @[Conditional.scala 39:67]
+  wire  _GEN_67 = _T_11 ? 1'h0 : _GEN_53; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_68 = _T_11 ? debugRegVal : _GEN_54; // @[Conditional.scala 39:67]
+  wire  _GEN_72 = _T_11 ? 1'h0 : _GEN_58; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_74 = _T_4 ? {{31'd0}, _T_10} : _GEN_59; // @[Conditional.scala 39:67]
+  wire  _GEN_82 = _T_4 ? 1'h0 : _GEN_67; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_83 = _T_4 ? debugRegVal : _GEN_68; // @[Conditional.scala 39:67]
+  wire  _GEN_86 = _T_4 ? 1'h0 : _GEN_72; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_89 = _T_1 ? {{5'd0}, debugReg} : _GEN_74; // @[Conditional.scala 39:67]
+  wire  _GEN_96 = _T_1 ? 1'h0 : _GEN_82; // @[Conditional.scala 39:67]
+  wire [31:0] _GEN_97 = _T_1 ? debugRegVal : _GEN_83; // @[Conditional.scala 39:67]
+  wire  _GEN_100 = _T_1 ? 1'h0 : _GEN_86; // @[Conditional.scala 39:67]
+  wire [36:0] _GEN_105 = _T ? {{5'd0}, debugReg} : _GEN_89; // @[Conditional.scala 40:58]
+  assign io_done = _T ? 1'h0 : _GEN_100; // @[Accelerator.scala 36:11 Accelerator.scala 178:15]
+  assign io_address = _GEN_105[15:0]; // @[Accelerator.scala 34:14 Accelerator.scala 66:14 Accelerator.scala 185:16 Accelerator.scala 185:16 Accelerator.scala 185:16 Accelerator.scala 185:16 Accelerator.scala 146:18 Accelerator.scala 157:18 Accelerator.scala 185:16]
+  assign io_writeEnable = _T ? 1'h0 : _GEN_96; // @[Accelerator.scala 33:18 Accelerator.scala 145:22 Accelerator.scala 156:22]
+  assign io_dataWrite = _T ? debugRegVal : _GEN_97; // @[Accelerator.scala 35:16 Accelerator.scala 67:16 Accelerator.scala 147:20 Accelerator.scala 158:20]
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
 `define RANDOMIZE
 `endif
@@ -240,23 +251,25 @@ initial begin
     `endif
 `ifdef RANDOMIZE_REG_INIT
   _RAND_0 = {1{`RANDOM}};
-  reg1 = _RAND_0[15:0];
+  stateReg = _RAND_0[3:0];
   _RAND_1 = {1{`RANDOM}};
-  reg2 = _RAND_1[15:0];
+  xReg = _RAND_1[31:0];
   _RAND_2 = {1{`RANDOM}};
-  _T = _RAND_2[3:0];
+  yReg = _RAND_2[31:0];
   _RAND_3 = {1{`RANDOM}};
-  _T_1 = _RAND_3[31:0];
+  inImageReg = _RAND_3[31:0];
   _RAND_4 = {1{`RANDOM}};
-  _T_2 = _RAND_4[31:0];
+  inImageLeftReg = _RAND_4[31:0];
   _RAND_5 = {1{`RANDOM}};
-  _T_3 = _RAND_5[31:0];
+  inImageRightReg = _RAND_5[31:0];
   _RAND_6 = {1{`RANDOM}};
-  _T_4 = _RAND_6[31:0];
+  inImageTopReg = _RAND_6[31:0];
   _RAND_7 = {1{`RANDOM}};
-  _T_5 = _RAND_7[31:0];
+  inImageDownReg = _RAND_7[31:0];
   _RAND_8 = {1{`RANDOM}};
-  _T_6 = _RAND_8[31:0];
+  debugReg = _RAND_8[31:0];
+  _RAND_9 = {1{`RANDOM}};
+  debugRegVal = _RAND_9[31:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial
@@ -266,76 +279,60 @@ end // initial
 `endif // SYNTHESIS
   always @(posedge clock) begin
     if (reset) begin
-      reg1 <= 16'h0;
-    end else begin
-      reg1 <= io_dataRead[15:0];
-    end
-    if (reset) begin
-      reg2 <= 16'h0;
-    end else begin
-      reg2 <= {{15'd0}, io_start};
-    end
-    if (reset) begin
-      _T <= 4'h0;
-    end else if (_T_8) begin
+      stateReg <= 4'h0;
+    end else if (_T) begin
       if (io_start) begin
-        _T <= 4'h1;
+        stateReg <= 4'h1;
       end
-    end else if (_T_9) begin
-      if (_T_10) begin
-        _T <= 4'h2;
+    end else if (_T_1) begin
+      if (_T_2) begin
+        stateReg <= 4'h2;
       end else begin
-        _T <= 4'ha;
+        stateReg <= 4'ha;
       end
-    end else if (_T_12) begin
-      _T <= 4'h3;
-    end else if (_T_13) begin
-      if (_T_19) begin
-        _T <= 4'h4;
+    end else if (_T_4) begin
+      stateReg <= 4'h3;
+    end else if (_T_11) begin
+      if (_T_17) begin
+        stateReg <= 4'h4;
       end else begin
-        _T <= 4'h9;
+        stateReg <= 4'h9;
       end
-    end else if (_T_21) begin
-      if (_T_35) begin
-        if (_T_34) begin
-          _T <= 4'h6;
-        end else begin
-          _T <= 4'h5;
-        end
+    end else if (_T_19) begin
+      if (_T_33) begin
+        stateReg <= {{1'd0}, _T_34};
       end else begin
-        _T <= 4'h9;
+        stateReg <= 4'h8;
       end
-    end else if (_T_38) begin
-      if (_T_43) begin
-        _T <= 4'h6;
-      end else begin
-        _T <= 4'h7;
-      end
-    end else if (_T_47) begin
-      _T <= 4'h8;
-    end else if (_T_53) begin
-      _T <= 4'h8;
-    end else if (_T_59) begin
-      _T <= 4'h3;
-    end else if (_T_67) begin
-      _T <= 4'h1;
+    end else if (_T_36) begin
+      stateReg <= {{1'd0}, _T_48};
+    end else if (_T_49) begin
+      stateReg <= 4'h8;
+    end else if (_T_56) begin
+      stateReg <= 4'h8;
+    end else if (_T_62) begin
+      stateReg <= 4'h3;
     end else if (_T_70) begin
-      _T <= 4'ha;
+      stateReg <= 4'h1;
+    end else if (_T_73) begin
+      stateReg <= 4'ha;
     end
     if (reset) begin
-      _T_1 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (_T_9) begin
-        _T_1 <= 32'h0;
-      end else if (!(_T_12)) begin
-        if (!(_T_13)) begin
-          if (!(_T_21)) begin
-            if (!(_T_38)) begin
-              if (!(_T_47)) begin
-                if (!(_T_53)) begin
-                  if (!(_T_59)) begin
-                    if (_T_67) begin
-                      _T_1 <= _T_63;
+      xReg <= 32'h0;
+    end else if (_T) begin
+      if (io_start) begin
+        xReg <= 32'h0;
+      end
+    end else if (!(_T_1)) begin
+      if (!(_T_4)) begin
+        if (!(_T_11)) begin
+          if (!(_T_19)) begin
+            if (!(_T_36)) begin
+              if (!(_T_49)) begin
+                if (!(_T_56)) begin
+                  if (!(_T_62)) begin
+                    if (_T_70) begin
+                      xReg <= _T_13;
                     end
                   end
                 end
@@ -346,18 +343,18 @@ end // initial
       end
     end
     if (reset) begin
-      _T_2 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (!(_T_9)) begin
-        if (_T_12) begin
-          _T_2 <= 32'h0;
-        end else if (!(_T_13)) begin
-          if (!(_T_21)) begin
-            if (!(_T_38)) begin
-              if (!(_T_47)) begin
-                if (!(_T_53)) begin
-                  if (_T_59) begin
-                    _T_2 <= _T_15;
+      yReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (_T_4) begin
+          yReg <= 32'h0;
+        end else if (!(_T_11)) begin
+          if (!(_T_19)) begin
+            if (!(_T_36)) begin
+              if (!(_T_49)) begin
+                if (!(_T_56)) begin
+                  if (_T_62) begin
+                    yReg <= _T_64;
                   end
                 end
               end
@@ -367,17 +364,52 @@ end // initial
       end
     end
     if (reset) begin
-      _T_3 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (!(_T_9)) begin
-        if (!(_T_12)) begin
-          if (!(_T_13)) begin
-            if (!(_T_21)) begin
-              if (!(_T_38)) begin
-                if (!(_T_47)) begin
-                  if (!(_T_53)) begin
-                    if (_T_59) begin
-                      _T_3 <= _T_5;
+      inImageReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (_T_4) begin
+          inImageReg <= io_dataRead;
+        end else if (_T_11) begin
+          inImageReg <= inImageTopReg;
+        end
+      end
+    end
+    if (reset) begin
+      inImageLeftReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (_T_4) begin
+          inImageLeftReg <= 32'h0;
+        end else if (!(_T_11)) begin
+          if (_T_19) begin
+            inImageLeftReg <= io_dataRead;
+          end
+        end
+      end
+    end
+    if (reset) begin
+      inImageRightReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (_T_4) begin
+          inImageRightReg <= io_dataRead;
+        end else if (_T_11) begin
+          inImageRightReg <= io_dataRead;
+        end
+      end
+    end
+    if (reset) begin
+      inImageTopReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (!(_T_4)) begin
+          if (!(_T_11)) begin
+            if (!(_T_19)) begin
+              if (!(_T_36)) begin
+                if (!(_T_49)) begin
+                  if (!(_T_56)) begin
+                    if (_T_62) begin
+                      inImageTopReg <= io_dataRead;
                     end
                   end
                 end
@@ -388,20 +420,33 @@ end // initial
       end
     end
     if (reset) begin
-      _T_4 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (!(_T_9)) begin
-        if (!(_T_12)) begin
-          if (!(_T_13)) begin
-            if (!(_T_21)) begin
-              if (!(_T_38)) begin
-                if (!(_T_47)) begin
-                  if (!(_T_53)) begin
-                    if (_T_59) begin
-                      _T_4 <= _T_3;
-                    end
-                  end
-                end
+      inImageDownReg <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (!(_T_4)) begin
+          if (!(_T_11)) begin
+            if (_T_19) begin
+              inImageDownReg <= inImageReg;
+            end
+          end
+        end
+      end
+    end
+    if (reset) begin
+      debugReg <= 32'h0;
+    end else if (_T) begin
+      if (io_start) begin
+        debugReg <= 32'h0;
+      end
+    end else if (!(_T_1)) begin
+      if (!(_T_4)) begin
+        if (!(_T_11)) begin
+          if (!(_T_19)) begin
+            if (_T_36) begin
+              debugReg <= {{26'd0}, _GEN_7};
+            end else if (_T_49) begin
+              if (_T_55) begin
+                debugReg <= 32'h3;
               end
             end
           end
@@ -409,35 +454,16 @@ end // initial
       end
     end
     if (reset) begin
-      _T_5 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (!(_T_9)) begin
-        if (!(_T_12)) begin
-          if (!(_T_13)) begin
-            if (!(_T_21)) begin
-              if (!(_T_38)) begin
-                if (!(_T_47)) begin
-                  if (!(_T_53)) begin
-                    if (_T_59) begin
-                      _T_5 <= io_dataRead;
-                    end
-                  end
-                end
+      debugRegVal <= 32'h0;
+    end else if (!(_T)) begin
+      if (!(_T_1)) begin
+        if (!(_T_4)) begin
+          if (!(_T_11)) begin
+            if (!(_T_19)) begin
+              if (_T_36) begin
+                debugRegVal <= inImageLeftReg;
               end
             end
-          end
-        end
-      end
-    end
-    if (reset) begin
-      _T_6 <= 32'h0;
-    end else if (!(_T_8)) begin
-      if (!(_T_9)) begin
-        if (!(_T_12)) begin
-          if (_T_13) begin
-            _T_6 <= io_dataRead;
-          end else if (_T_21) begin
-            _T_6 <= io_dataRead;
           end
         end
       end
