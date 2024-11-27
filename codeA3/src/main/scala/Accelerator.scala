@@ -15,6 +15,7 @@ class Accelerator extends Module {
 
 
   // --------- minimal compilerbar accelerator --------- //
+  /*
   val reg1 = RegInit(0.U(16.W))
   val reg2 = RegInit(0.U(16.W))
 
@@ -26,7 +27,7 @@ class Accelerator extends Module {
 
   reg2 := io.start
   io.done := reg2
-
+  */
   // --------- real code --------- //
 
   // states
