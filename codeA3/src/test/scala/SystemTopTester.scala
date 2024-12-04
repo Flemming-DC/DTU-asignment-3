@@ -64,12 +64,20 @@ class SystemTopTester(dut: SystemTop) extends PeekPokeTester(dut) {
     //System.out.println("a:" + i + " d:" + data )
     step(1)
   }
+
+  var expectedOutImage = new util.ArrayList[Int]();
+  for (pixel <- Images.expectedOutImage) {
+    expectedOutImage.add(pixel);
+  }
+
   poke(dut.io.testerDataMemEnable, 0)
   System.out.println("Done!")
 
   System.out.print("\r\n")
   System.out.println("Input image from address 0 to 399:")
   Images.printImage(inputImage)
+  System.out.println("Expected Output:")
+  Images.printImage(expectedOutImage)
   System.out.println("Processed image from address 400 to 799:")
   Images.printImage(outputImage)
 
