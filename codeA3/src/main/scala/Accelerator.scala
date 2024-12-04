@@ -98,7 +98,7 @@ class Accelerator extends Module {
       //inImageDownReg := read(xReg, yReg - 1.U);
       // top og down updateres i de efterfølgende states
       inImageRightReg := read(xReg + 1.U, yReg);
-      inImageReg := inImageTopReg;
+      inImageDownReg := inImageReg;
 
       stateReg := Mux(yReg < 20.U, border_and_black_pixel, xpp);
     }
@@ -109,7 +109,7 @@ class Accelerator extends Module {
       //inImageLeftReg := inImageReg;
       //inImageReg := inImageRightReg;
       inImageLeftReg := read(xReg - 1.U, yReg);
-      inImageDownReg := inImageReg;
+      inImageReg := inImageTopReg;
 
       val on_border = (xReg === 0.U || xReg === 19.U || yReg === 0.U || yReg === 19.U);
       val is_black = inImageReg === 0.U;
