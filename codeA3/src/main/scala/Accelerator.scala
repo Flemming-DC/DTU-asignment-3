@@ -83,8 +83,8 @@ class Accelerator extends Module {
 
     is(y_to_0) {
       inImageLeftReg := 0.U;
-      inImageReg := read(0.U, 0.U);
-      inImageRightReg := read(1.U, 0.U);
+      inImageDownReg := 0.U;
+      inImageTopReg := read(0.U, 1.U);
 
       yReg := 0.U
       stateReg := y_loop_start;
@@ -108,8 +108,8 @@ class Accelerator extends Module {
       //inImageTopReg := read(xReg, yReg + 1.U);
       //inImageLeftReg := inImageReg;
       //inImageReg := inImageRightReg;
-      inImageLeftReg := read(xReg - 1.U, yReg);
       inImageReg := inImageTopReg;
+      inImageTopReg := read(xReg, yReg + 1.U);
 
       val on_border = (xReg === 0.U || xReg === 19.U || yReg === 0.U || yReg === 19.U);
       val is_black = inImageReg === 0.U;
@@ -161,7 +161,7 @@ class Accelerator extends Module {
     }
 
     is(ypp) {
-      inImageTopReg := read(xReg, yReg + 1.U);
+      inImageLeftReg := read(xReg - 1.U, yReg + 1.U);
 
       yReg := yReg + 1.U
 
