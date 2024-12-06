@@ -161,6 +161,7 @@ class Accelerator extends Module {
     }
 
     is(ypp) {
+      // offsetting y, since we are in the previous step
       inImageLeftReg := read(xReg - 1.U, yReg + 1.U);
 
       yReg := yReg + 1.U
